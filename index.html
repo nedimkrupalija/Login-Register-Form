@@ -1,0 +1,72 @@
+
+<html>
+    <head>
+       <title>Login</title>
+       <link rel="stylesheet" href="./css/main.css">
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <form action="login.php" method="post" class="form" id="login">
+                <h1 class="form__title">Login:</h1>
+                <div class="form__message form__message--error"></div>
+                <div class="form__input-group">
+                    <input type="text" class="form__input" name="loginUser" id="loginUsername" autofocus placeholder="Username">
+                    <div class="form__input-error-message"></div>
+                </div>
+
+                <div class="form__input-group">
+                    <input type="password" class="form__input" name="loginPass" id="loginPassword" autofocus placeholder="Password">
+                    <div class="form__input-error-message"></div>
+                </div>
+
+                <button class="form__button" type="submit">Dalje</button>
+
+                <p class="form__text">
+                    <a href="#" class="form__link">Zaboravili ste sifru?</a>
+                </p>
+                <p class="form__text">
+                    <a class="form__link" href="./" id="linkCreateAccount" >Nemate racun?</a>
+                </p>
+            </form>
+            <form action="register.php" method="post"  class="form form--hidden" id="createAccount">
+                <h1 class="form__title">Registracija:</h1>
+                <div class="form__message form__message--error" id="reg_err_message"></div>
+                <div class="form__input-group">
+                    <input type="text" id="signupUsername" name="user" class="form__input" autofocus placeholder="Username">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <input type="text" class="form__input" name="mail" id="signupEmail" autofocus placeholder="E-mail">
+                    <div class="form__input-error-message"></div>
+                </div>
+
+                <div class="form__input-group">
+                    <input type="password" class="form__input" name="pass" id="signupPassword" autofocus placeholder="Password">
+                    <div class="form__input-error-message"></div>
+                </div>
+
+                <div class="form__input-group">
+                    <input type="password" class="form__input" name="chkPass" id="signupConfirmPassword" autofocus placeholder="Potvrdite password">
+                    <div class="form__input-error-message"></div>
+                </div>
+
+                <button class="form__button" name="submit_button" type="submit">Registracija</button>
+
+               
+                <p class="form__text">
+                    <a class="form__link" href="./" id="linkLogin" >Vec imate racun?</a>
+                </p>
+               
+            </form>
+
+
+
+        </div>
+    
+       <script type="module" src="./js/index.js"></script> 
+       
+    </body>
+</html>
